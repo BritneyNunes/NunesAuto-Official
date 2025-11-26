@@ -89,7 +89,7 @@
 .continue-shopping-button,
 .view-orders-button {
   display: block;
-  width: 100%;
+  width: 80%;
   padding: 15px;
   border-radius: 8px;
   text-decoration: none;
