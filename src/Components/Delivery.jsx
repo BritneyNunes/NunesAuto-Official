@@ -50,45 +50,45 @@ function Delivery() {
             return;
         }
 
-        // EXACTLY MATCH EMAILJS TEMPLATE VARIABLE NAMES (case-sensitive!)
-        const templateParams = {
-            fullName: deliveryDetails.fullName.trim(),
-            email: deliveryDetails.email.trim(),
-            addressLine: deliveryDetails.addressLine.trim(),
-            city: deliveryDetails.city.trim(),
-            postalCode: deliveryDetails.postalCode.trim(),
-            phoneNumber: deliveryDetails.phoneNumber.trim(),
+        // // EXACTLY MATCH EMAILJS TEMPLATE VARIABLE NAMES (case-sensitive!)
+        // const templateParams = {
+        //     fullName: deliveryDetails.fullName.trim(),
+        //     email: deliveryDetails.email.trim(),
+        //     addressLine: deliveryDetails.addressLine.trim(),
+        //     city: deliveryDetails.city.trim(),
+        //     postalCode: deliveryDetails.postalCode.trim(),
+        //     phoneNumber: deliveryDetails.phoneNumber.trim(),
 
-            // Delivery option
-            deliveryName: storedOrder.deliveryOption?.name || "Standard Delivery",
-            deliveryPrice: formatPrice(storedOrder.deliveryOption?.price || 0),
+        //     // Delivery option
+        //     deliveryName: storedOrder.deliveryOption?.name || "Standard Delivery",
+        //     deliveryPrice: formatPrice(storedOrder.deliveryOption?.price || 0),
 
-            // Products array - MUST use lowercase "name" and "price" to match {{#each products}}
-            products: storedOrder.products.map(p => ({
-                name: p.Name || p.name || "Unknown Item",
-                price: formatPrice(p.Price || p.price || 0)
-            })),
+        //     // Products array - MUST use lowercase "name" and "price" to match {{#each products}}
+        //     products: storedOrder.products.map(p => ({
+        //         name: p.Name || p.name || "Unknown Item",
+        //         price: formatPrice(p.Price || p.price || 0)
+        //     })),
 
-            // Totals - formatted with R and 2 decimals
-            subtotal: formatPrice(storedOrder.subtotal || 0),
-            total: formatPrice(storedOrder.total || 0)
-        };
+        //     // Totals - formatted with R and 2 decimals
+        //     subtotal: formatPrice(storedOrder.subtotal || 0),
+        //     total: formatPrice(storedOrder.total || 0)
+        // };
 
-        try {
-            await emailjs.send(
-                "service_fru4fgk",       // Your Service ID
-                "template_jnsiogm",      // Your Template ID
-                templateParams,
-                "NtcoRuX6i6c0q2X2R"       // Your Public Key (User ID)
-            );
+        // try {
+        //     await emailjs.send(
+        //         "service_fru4fgk",       // Your Service ID
+        //         "template_jnsiogm",      // Your Template ID
+        //         templateParams,
+        //         "NtcoRuX6i6c0q2X2R"       // Your Public Key (User ID)
+        //     );
 
-            console.log("Order confirmation email sent successfully!");
-            navigate('/confirmation');
-        } catch (error) {
-            console.error("EmailJS Error:", error);
-            alert("Order placed successfully! Confirmation email failed — we’ll contact you shortly.");
-            navigate('/confirmation'); // Still proceed to confirmation
-        }
+        //     console.log("Order confirmation email sent successfully!");
+        //     navigate('/confirmation');
+        // } catch (error) {
+        //     console.error("EmailJS Error:", error);
+        //     alert("Order placed successfully! Confirmation email failed — we’ll contact you shortly.");
+        //     navigate('/confirmation'); // Still proceed to confirmation
+        // }
     };
 
     return (
