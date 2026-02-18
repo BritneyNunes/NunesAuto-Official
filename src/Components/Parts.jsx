@@ -19,7 +19,7 @@ function Parts() {
   const { selectedBrand } = useContext(BrandsContext); 
   parts.forEach(p => console.log(p.Name, p.Price));
 
-  const elasticIP = import.meta.env.IP || "http://98.91.62.10:3000" 
+  const elasticIP = import.meta.env.IP || "http://localhost:3000" 
 
   const baseUrl = getBaseUrl();  // Get the base URL (which includes IP from the query string or defaults)
   console.log(`Base URL used for fetching parts: ${elasticIP}`);

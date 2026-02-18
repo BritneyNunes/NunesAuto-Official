@@ -3,7 +3,7 @@ import { getBaseUrl } from "../Utilities/getBaseUrl"; // Import utility for base
 
 export const BrandsContext = createContext();
 
-const elasticIP = import.meta.env.IP || "http://98.91.62.10:3000" 
+const elasticIP = import.meta.env.IP || "http://localhost:3000" 
 
 export function BrandsProvider({ children }) {
   const [brands, setBrands] = useState([]); // State to hold brands

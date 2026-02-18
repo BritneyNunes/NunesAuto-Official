@@ -14,7 +14,7 @@ const deliveryOptions = [
   { id: 'priority', name: 'Priority Delivery', description: '3-5 hours', price: 250.00 },
 ];
 
-const elasticIP = import.meta.env.IP || "http://98.91.62.10:3000" 
+const elasticIP = import.meta.env.IP || "http://localhost:3000" 
 const baseUrl = getBaseUrl();  // Get the base URL (which includes IP from the query string or defaults)
 console.log(`Base URL used for fetching brands: ${elasticIP}`);
 
