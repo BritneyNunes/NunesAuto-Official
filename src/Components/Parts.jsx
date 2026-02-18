@@ -19,7 +19,7 @@ function Parts() {
   const { selectedBrand } = useContext(BrandsContext); 
   parts.forEach(p => console.log(p.Name, p.Price));
 
-  const elasticIP = import.meta.env.IP || "https://nunesautobackend7.onrender.com/" 
+  const elasticIP = import.meta.env.IP || "https://nunesautobackend7.onrender.com" 
 
   const baseUrl = getBaseUrl();  // Get the base URL (which includes IP from the query string or defaults)
   console.log(`Base URL used for fetching parts: ${elasticIP}`);

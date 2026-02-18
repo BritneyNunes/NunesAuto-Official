@@ -3,7 +3,7 @@ import { getBaseUrl } from "../Utilities/getBaseUrl"; // Import utility for base
 
 export const BrandsContext = createContext();
 
-const elasticIP = import.meta.env.IP || "https://nunesautobackend7.onrender.com/" 
+const elasticIP = import.meta.env.IP || "https://nunesautobackend7.onrender.com" 
 
 export function BrandsProvider({ children }) {
   const [brands, setBrands] = useState([]); // State to hold brands
