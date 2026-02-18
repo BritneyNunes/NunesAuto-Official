@@ -4,6 +4,7 @@ import { Typography, Container, Box, TextField, Button, Paper, Grid } from '@mui
 import "./Delivery.css";
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import emailjs from '@emailjs/browser';
+import Confirmation from './Confirmation';
 
 function Delivery() {
     const navigate = useNavigate();
@@ -178,7 +179,7 @@ function Delivery() {
                         variant="contained"
                         fullWidth
                         className="place-order-button"
-                        
+                        to="/confirmation"
                     >
                         Continue to Payment
                     </Button>
