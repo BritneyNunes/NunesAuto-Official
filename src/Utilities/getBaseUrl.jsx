@@ -9,5 +9,5 @@ export function getBaseUrl() {
   console.log(`Using IP address: ${ip}`);
 
   // Return the base URL with the IP and port 3000
-  return `https://nunesautobackend7.onrender.comv`;
+  return `https://nunesautobackend7.onrender.com`;
 }
