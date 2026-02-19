@@ -180,6 +180,7 @@ function Delivery() {
                         variant="contained"
                         fullWidth
                         className="place-order-button"
+                        href="/confirmation"
                         
                     >
                         Continue to Payment
