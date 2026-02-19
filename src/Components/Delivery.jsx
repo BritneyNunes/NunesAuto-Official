@@ -174,13 +174,13 @@ function Delivery() {
                         />
                     </Box>
 
-                    <Link>
+                    <Link to="/confirmation">
                        <Button
                         type="submit"
                         variant="contained"
                         fullWidth
                         className="place-order-button"
-                        to="/confirmation"
+                        
                     >
                         Continue to Payment
                     </Button>
